@@ -92,7 +92,13 @@ export const exclusiveOffers = [
 export const testimonials = [
     { id: 1, name: "Emma Rodriguez", address: "Barcelona, Spain", image: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200", rating: 5, review: "I've used many booking platforms before, but none compare to the personalized experience and attention to detail that QuickStay provides." },
     { id: 2, name: "Liam Johnson", address: "New York, USA", image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200", rating: 4, review: "QuickStay exceeded my expectations. The booking process was seamless, and the hotels were absolutely top-notch. Highly recommended!" },
-    { id: 3, name: "Sophia Lee", address: "Seoul, South Korea", image: "https://images.unsplash.com/photo-1701615004837-40d8573b6652?q=80&w=200", rating: 5, review: "Amazing service! I always find the best luxury accommodations through QuickStay. Their recommendations never disappoint!" }
+    { id: 3, name: "Sophia Lee", address: "Seoul, South Korea", image: "https://images.unsplash.com/photo-1701615004837-40d8573b6652?q=80&w=200", rating: 5, review: "Amazing service! I always find the best luxury accommodations through QuickStay. Their recommendations never disappoint!" },
+    { id: 4, name: "Liam Johnson", address: "New York, USA", image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200", rating: 4, review: "QuickStay exceeded my expectations. The booking process was seamless, and the hotels were absolutely top-notch. Highly recommended!" },
+    { id: 5, name: "Sophia Lee", address: "Seoul, South Korea", image: "https://images.unsplash.com/photo-1701615004837-40d8573b6652?q=80&w=200", rating: 5, review: "Amazing service! I always find the best luxury accommodations through QuickStay. Their recommendations never disappoint!" },
+    { id: 6, name: "Liam Johnson", address: "New York, USA", image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200", rating: 4, review: "QuickStay exceeded my expectations. The booking process was seamless, and the hotels were absolutely top-notch. Highly recommended!" },
+    { id: 7, name: "Sophia Lee", address: "Seoul, South Korea", image: "https://images.unsplash.com/photo-1701615004837-40d8573b6652?q=80&w=200", rating: 5, review: "Amazing service! I always find the best luxury accommodations through QuickStay. Their recommendations never disappoint!" },
+    { id: 8, name: "Liam Johnson", address: "New York, USA", image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200", rating: 4, review: "QuickStay exceeded my expectations. The booking process was seamless, and the hotels were absolutely top-notch. Highly recommended!" },
+    { id: 9, name: "Sophia Lee", address: "Seoul, South Korea", image: "https://images.unsplash.com/photo-1701615004837-40d8573b6652?q=80&w=200", rating: 5, review: "Amazing service! I always find the best luxury accommodations through QuickStay. Their recommendations never disappoint!" }
 ];
 
 // Facility Icon
@@ -146,7 +152,7 @@ export const roomsDummyData = [
         "_id": "67f7647c197ac559e4089b96",
         "hotel": hotelDummyData,
         "roomType": "Double Bed",
-        "pricePerNight": 399,
+        "pricePerNight": 3999,
         "amenities": ["Room Service", "Mountain View", "Pool Access"],
         "images": [roomImg1, roomImg2, roomImg3, roomImg4],
         "isAvailable": true,
@@ -158,7 +164,7 @@ export const roomsDummyData = [
         "_id": "67f76452197ac559e4089b8e",
         "hotel": hotelDummyData,
         "roomType": "Double Bed",
-        "pricePerNight": 299,
+        "pricePerNight": 2999,
         "amenities": ["Room Service", "Mountain View", "Pool Access"],
         "images": [roomImg2, roomImg3, roomImg4, roomImg1],
         "isAvailable": true,
@@ -170,7 +176,7 @@ export const roomsDummyData = [
         "_id": "67f76406197ac559e4089b82",
         "hotel": hotelDummyData,
         "roomType": "Double Bed",
-        "pricePerNight": 249,
+        "pricePerNight": 2499,
         "amenities": ["Free WiFi", "Free Breakfast", "Room Service"],
         "images": [roomImg3, roomImg4, roomImg1, roomImg2],
         "isAvailable": true,
@@ -182,7 +188,7 @@ export const roomsDummyData = [
         "_id": "67f763d8197ac559e4089b7a",
         "hotel": hotelDummyData,
         "roomType": "Single Bed",
-        "pricePerNight": 199,
+        "pricePerNight": 1999,
         "amenities": ["Free WiFi", "Room Service", "Pool Access"],
         "images": [roomImg4, roomImg1, roomImg2, roomImg3],
         "isAvailable": true,
