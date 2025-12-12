@@ -1,28 +1,24 @@
-import express from "express";
-import "dotenv/config";
-import cors from "cors";
-import connectDB from "./configs/db.js";
+import express from "express"
+import "dotenv/config"
+import cors from "cors"
+import connectDB from "./configs/db.js"
 import { clerkMiddleware } from '@clerk/express'
-import clerkWebhooks from "./controller/clerkWebhooks.js";
+import clerkWebhooks from "./controllers/clerkWebhooks.js"
 
+connectDB()
 
-
-connectDB();
-
-const app = express();
-app.use(cors());
+const app=express()
+app.use(cors())//enable cros  origin resource sharing
 
 //middleware
 app.use(express.json())
 app.use(clerkMiddleware())
 
+//API to listen to clerk webhooks
+app.use("/api/clerk", clerkWebhooks)
 
-//api listen to clerk webhooks
-app.use("/api/clerk",clerkWebhooks);
+app.get('/',(req,res)=> res.send("api is working fine"))
 
+const PORT=process.env.PORT || 3000;
 
-app.get("/", (req, res) => res.send("Api is working"));
-
-const PORT = process.env.PORT || 3000;
-
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, ()=> console.log(`server running on port ${PORT}`));
