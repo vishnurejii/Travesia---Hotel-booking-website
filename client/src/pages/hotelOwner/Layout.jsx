@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Navigation from "../../components/hotelOwner/Navigation";
 import Sidebar from "../../components/hotelOwner/Sidebar";
-import { useAppContext } from "../../context/AppContext";
+import { useAppContext } from "../../context/AppContext1";
 import { useEffect } from "react";
 
 export default function Layout() {

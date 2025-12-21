@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { assets, cities } from "../assets/assets";
-import { useAppContext } from "../context/AppContext";
+import { useAppContext } from "../context/AppContext1";
 import toast from "react-hot-toast";
 
 export default function HotelReg(){

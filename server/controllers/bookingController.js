@@ -126,4 +126,3 @@ export const getHotelBookings = async (req, res) => {
     });
   }
 };
-

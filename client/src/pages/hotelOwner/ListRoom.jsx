@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import Title from "../../components/Title";
 
-import { useAppContext } from "../../context/AppContext";
+import { useAppContext } from "../../context/AppContext1";
 import toast from "react-hot-toast";
 
 export default function ListRoom(){
 
     const [rooms, setRooms] = useState([])
-    const {axios, getToken, user}=useAppContext()
+    const {axios, getToken, user, currency}=useAppContext()
 
 
     //fetch rooms from the hotel owner
@@ -66,7 +66,7 @@ export default function ListRoom(){
                             <tr key={index}>
                                 <td className="py-3 px-4 text-gray-700 border-t border-gray-300">{item.roomType}</td>
                                 <td className="py-3 px-4 text-gray-700 border-t border-gray-300 max-sm:hidden">{item.amenities.join(', ')}</td>
-                                <td className="py-3 px-4 text-gray-700 border-t border-gray-300">{item.pricePerNight}</td>
+                                <td className="py-3 px-4 text-gray-700 border-t border-gray-300">{currency} {item.pricePerNight}</td>
                                 <td className="py-3 px-4 border-t border-gray-300 text-sm text-red-500">
                                     <label className="relative inline-flex items-center cursor-pointer text-gray-900 gap-3">
                                         <input onChange={()=>toggleAvailability(item._id)} type="checkbox" className="sr-only peer" checked={item.isAvailable} />

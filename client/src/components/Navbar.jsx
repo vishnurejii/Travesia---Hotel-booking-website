@@ -2,7 +2,7 @@ import React, { use, useEffect, useState } from "react";
 import { assets } from "../assets/assets";
 import { Link,  useLocation } from "react-router-dom";
 import { useClerk, UserButton } from "@clerk/clerk-react";
-import { useAppContext } from "../context/AppContext";
+import { useAppContext } from "../context/AppContext1";
 import Dashboard from "../pages/hotelOwner/Dashboard";
 
 const BookIcon = () => (
