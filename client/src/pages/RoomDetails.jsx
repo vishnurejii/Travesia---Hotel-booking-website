@@ -268,19 +268,18 @@ export default function RoomDetails() {
       </div>
 
       {/* Owner Details - Bottom of Page */}
-      {room.hotel?.owner && (
-        <div className="mt-16 p-6 md:p-8 bg-white rounded-xl border border-gray-200 shadow-sm">
-          <h3 className="text-xl font-semibold text-gray-800 mb-4 playfair-font">About Your Host</h3>
-          <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
-            {room.hotel.owner.image && (
-              <img 
-                src={room.hotel.owner.image} 
-                alt="Owner" 
-                className="w-20 h-20 rounded-full object-cover border-2 border-gray-200 shadow-md"
-              />
-            )}
-           <div className="flex-1">
-  <p className="text-sm font-medium text-gray-600 mb-1">Hosted by</p>
+{room.hotel.owner.image && (
+  <img
+    src={room.hotel.owner.image}
+    alt="Owner"
+    className="w-20 h-20 rounded-full object-cover border-2 border-gray-200 shadow-md"
+  />
+)}
+
+<div className="flex-1">
+  <p className="text-sm font-medium text-gray-600 mb-1">
+    Hosted by
+  </p>
 
   <p className="text-xl font-semibold text-gray-800 playfair-font">
     Vishnu C R
