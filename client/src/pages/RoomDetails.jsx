@@ -279,16 +279,33 @@ export default function RoomDetails() {
                 className="w-20 h-20 rounded-full object-cover border-2 border-gray-200 shadow-md"
               />
             )}
-            <div className="flex-1">
-              <p className="text-sm font-medium text-gray-600 mb-1">Hosted by</p>
-              <p className="text-xl font-semibold text-gray-800 playfair-font">{room.hotel.owner.username || "Hotel Owner"}</p>
-              {room.hotel.owner.email && (
-                <div className="flex items-center gap-2 mt-2">
-                  <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                  <p className="text-sm text-gray-600">{room.hotel.owner.email}</p>
-                </div>
+           <div className="flex-1">
+  <p className="text-sm font-medium text-gray-600 mb-1">Hosted by</p>
+
+  <p className="text-xl font-semibold text-gray-800 playfair-font">
+    Vishnu C R
+  </p>
+
+  <div className="flex items-center gap-2 mt-2">
+    <svg
+      className="w-4 h-4 text-gray-500"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+      />
+    </svg>
+
+    <p className="text-sm text-gray-600">
+      vishnurejii2003@email.com
+    </p>
+  </div>
+</div>
               )}
             </div>
           </div>
