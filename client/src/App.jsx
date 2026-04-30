@@ -14,6 +14,7 @@ import AddRoom from "./pages/hotelOwner/AddRoom";
 import ListRoom from "./pages/hotelOwner/ListRoom";
 import{Toaster} from "react-hot-toast"
 import { useAppContext } from "./context/AppContext1";
+import ChatBot from "./components/ChatBot";
 
 function App() {
 
@@ -41,6 +42,7 @@ function App() {
         </Routes>
       </div>
       <Footer />
+      {!isOwnerPath && <ChatBot />}
     </div>
   );
 }
