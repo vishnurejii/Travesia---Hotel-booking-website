@@ -29,6 +29,7 @@ app.post(
 
 // normal middleware
 app.use(express.json());
+app.use("/api/chat", chatRouter);
 app.use(clerkMiddleware());
 
 app.get("/", (req, res) => res.end("API is working"));
@@ -37,7 +38,6 @@ app.use("/api/user", userRouter);
 app.use("/api/hotels", hotelRouter);
 app.use("/api/rooms", roomRouter);
 app.use("/api/bookings", bookingRouter);
-app.use("/api/chat", chatRouter);
 
 // Test email endpoint (for debugging)
 app.post("/api/test-email", testEmail);
