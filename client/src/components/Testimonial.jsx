@@ -31,8 +31,8 @@ export default function Testimonial() {
       <div className="marquee-row w-full mx-auto max-w-full overflow-hidden relative">
         <div className="absolute left-0 top-0 h-full w-10 z-10 pointer-events-none bg-gradient-to-r from-white to-transparent"></div>
         <div className="marquee-inner flex transform-gpu min-w-[200%] pt-10 pb-5">
-          {testimonials.map((testimonial) => (
-            <div className="p-4 rounded-lg mx-4 shadow hover:shadow-lg transition-all duration-200 w-80 shrink-0">
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="p-4 rounded-lg mx-4 shadow hover:shadow-lg transition-all duration-200 w-80 shrink-0">
             <div className="flex gap-2">
                 <img className="size-11 rounded-full" src={testimonial.image} alt="User Image" />
                 <div className="flex flex-col">

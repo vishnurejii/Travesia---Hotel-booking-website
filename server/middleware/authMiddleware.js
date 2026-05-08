@@ -4,7 +4,7 @@ import { fetchUserFromClerk } from "../utils/clerkHelper.js";
 //middleware to check if user is authenticated
 
 export const protect=async(req,res,next)=>{
-    const auth = await req.auth();
+    const auth = req.auth;
     const{userId}=auth;
     if(!userId){
         return res.json({success: false,message: "not authenticated"})

@@ -5,7 +5,7 @@ import { fetchUserFromClerk } from "../utils/clerkHelper.js";
 export const registerHotel=async(req,res)=>{
     try{
         const {name,address,contact,city}=req.body;
-        const auth = await req.auth();
+        const auth = req.auth;
         const owner=auth.userId; // ✅ Clerk user
 
         if (!owner) {

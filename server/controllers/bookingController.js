@@ -41,7 +41,7 @@ export const createBooking = async (req, res) => {
   try {
     const { room, checkInDate, checkOutDate, guests } = req.body;
 
-    const auth = await req.auth();
+    const auth = req.auth;
     const user = auth.userId; // ✅ Clerk user
 
     if (!user) {
@@ -255,7 +255,7 @@ export const createBooking = async (req, res) => {
 //get/api/bookings/user
 export const getUserBookings = async (req, res) => {
   try {
-    const auth = await req.auth();
+    const auth = req.auth;
     const user = auth.userId; // ✅ Clerk user
 
     if (!user) {
@@ -285,7 +285,7 @@ export const getUserBookings = async (req, res) => {
 
 export const getHotelBookings = async (req, res) => {
   try {
-    const auth = await req.auth();
+    const auth = req.auth;
     const hotel = await Hotel.findOne({ owner: auth.userId });
 
     if (!hotel) {
@@ -331,7 +331,7 @@ export const getHotelBookings = async (req, res) => {
 export const processPayment = async (req, res) => {
   try {
     const { bookingId } = req.params;
-    const auth = await req.auth();
+    const auth = req.auth;
     const user = auth.userId;
 
     if (!user) {
@@ -484,7 +484,7 @@ export const processPayment = async (req, res) => {
 export const verifyPayment = async (req, res) => {
   try {
     const { orderId, paymentId, signature, bookingId } = req.body;
-    const auth = await req.auth();
+    const auth = req.auth;
     const user = auth.userId;
 
     if (!user) {
